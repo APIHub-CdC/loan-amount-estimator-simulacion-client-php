@@ -15,7 +15,7 @@ class LoanAmountEstimatorSimulacionApiTest extends \PHPUnit_Framework_TestCase
         $client = new \GuzzleHttp\Client(['handler' => $handler]);
         $this->apiInstance = new LAE_Api($client, $config);
 
-        $this->x_api_key = "wygabaWTlFUmpegWc0AMsUAhrUe3t2Wv";
+        $this->x_api_key = "your_api_key";
     }
 
     public function testGetLAEByPerson()
