@@ -1,9 +1,9 @@
 <?php
 
-namespace LoanAmountEstimatorSimulacion\Client\Model;
+namespace LAESimulacion\Client\Model;
 
 use \ArrayAccess;
-use \LoanAmountEstimatorSimulacion\Client\ObjectSerializer;
+use \LAESimulacion\Client\ObjectSerializer;
 
 class Error implements ModelInterface, ArrayAccess
 {

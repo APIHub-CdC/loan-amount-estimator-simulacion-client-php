@@ -1,9 +1,9 @@
 <?php
 
-namespace LoanAmountEstimatorSimulacion\Client\Model;
+namespace LAESimulacion\Client\Model;
 
 use \ArrayAccess;
-use \LoanAmountEstimatorSimulacion\Client\ObjectSerializer;
+use \LAESimulacion\Client\ObjectSerializer;
 
 class Respuesta implements ModelInterface, ArrayAccess
 {
@@ -14,7 +14,7 @@ class Respuesta implements ModelInterface, ArrayAccess
     protected static $apihubTypes = [
         'folio_otorgante' => 'string',
         'folio_consulta_lae' => 'string',
-        'scores' => '\LoanAmountEstimatorSimulacion\Client\Model\LaeScore[]'
+        'scores' => '\LAESimulacion\Client\Model\LaeScore[]'
     ];
     
     protected static $apihubFormats = [

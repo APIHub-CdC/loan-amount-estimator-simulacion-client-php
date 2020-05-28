@@ -45,7 +45,7 @@ Al iniciar sesión seguir los siguientes pasos:
 
 ### Paso 2. Capturar los datos de la petición
 
-Los siguientes datos a modificar se encuentran en **_test/Api/LoanAmountEstimatorSimulacionApiTest.php_**
+Los siguientes datos a modificar se encuentran en **_test/Api/LAESimulacionApiTest.php_**
 
 Es importante contar con el setUp() que se encargará de inicializar la url. Modificar la URL **_('the_url')_** de la petición del objeto **_\$config_**, como se muestra en el siguiente fragmento de código:
 
@@ -53,7 +53,7 @@ Es importante contar con el setUp() que se encargará de inicializar la url. Mod
 public function setUp()
 {
   $handler = \GuzzleHttp\HandlerStack::create();
-  $config = new \LoanAmountEstimatorSimulacion\Client\Configuration();
+  $config = new \LAESimulacion\Client\Configuration();
   $config->setHost('the_url');
 
   $client = new \GuzzleHttp\Client(['handler' => $handler]);
@@ -63,15 +63,15 @@ public function setUp()
 }
 
 /**
-* Este es el método que se será ejecutado en la prueba ubicado en path/to/repository/test/Api/LoanAmountEstimatorSimulacionApiTest.php
+* Este es el método que se será ejecutado en la prueba ubicado en path/to/repository/test/Api/LAESimulacionApiTest.php
 */
 public function testGetLAEByPerson()
 {
-  $request = new \LoanAmountEstimatorSimulacion\Client\Model\PeticionPersona();
-  $persona = new \LoanAmountEstimatorSimulacion\Client\Model\Persona();
-  $domicilio = new \LoanAmountEstimatorSimulacion\Client\Model\DomicilioPeticion();        
-  $estado = new \LoanAmountEstimatorSimulacion\Client\Model\CatalogoEstados();
-  $segmento = new \LoanAmountEstimatorSimulacion\Client\Model\CatalogoSegmento();
+  $request = new \LAESimulacion\Client\Model\PeticionPersona();
+  $persona = new \LAESimulacion\Client\Model\Persona();
+  $domicilio = new \LAESimulacion\Client\Model\DomicilioPeticion();        
+  $estado = new \LAESimulacion\Client\Model\CatalogoEstados();
+  $segmento = new \LAESimulacion\Client\Model\CatalogoSegmento();
       
   $domicilio->setDireccion("SAN JOAQUIN");
   $domicilio->setColoniaPoblacion("EL ARENAL");
@@ -108,8 +108,8 @@ public function testGetLAEByPerson()
 
 public function testGetLAEByFolioConsulta()
 {
-  $request = new \LoanAmountEstimatorSimulacion\Client\Model\PeticionFolioConsulta();
-  $segmento = new \LoanAmountEstimatorSimulacion\Client\Model\CatalogoSegmento();
+  $request = new \LAESimulacion\Client\Model\PeticionFolioConsulta();
+  $segmento = new \LAESimulacion\Client\Model\CatalogoSegmento();
 
   $request->setFolioOtorgante("1");
   $request->setSegmento($segmento::PP);

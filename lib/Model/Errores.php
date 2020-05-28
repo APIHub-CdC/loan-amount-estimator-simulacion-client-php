@@ -1,9 +1,9 @@
 <?php
 
-namespace LoanAmountEstimatorSimulacion\Client\Model;
+namespace LAESimulacion\Client\Model;
 
 use \ArrayAccess;
-use \LoanAmountEstimatorSimulacion\Client\ObjectSerializer;
+use \LAESimulacion\Client\ObjectSerializer;
 
 class Errores implements ModelInterface, ArrayAccess
 {
@@ -12,7 +12,7 @@ class Errores implements ModelInterface, ArrayAccess
     protected static $apihubModelName = 'Errores';
     
     protected static $apihubTypes = [
-        'errores' => '\LoanAmountEstimatorSimulacion\Client\Model\Error[]'
+        'errores' => '\LAESimulacion\Client\Model\Error[]'
     ];
     
     protected static $apihubFormats = [

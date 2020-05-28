@@ -1,6 +1,6 @@
 <?php
 
-namespace LoanAmountEstimatorSimulacion\Client\Model;
+namespace LAESimulacion\Client\Model;
 
 interface ModelInterface
 {

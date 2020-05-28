@@ -1,15 +1,15 @@
 <?php
 
-namespace LoanAmountEstimatorSimulacion\Client;
+namespace LAESimulacion\Client;
 
-use \LoanAmountEstimatorSimulacion\Client\Api\LoanAmountEstimatorSimulacionApi as LAE_Api;
+use \LAESimulacion\Client\Api\LAESimulacionApi as LAE_Api;
 
-class LoanAmountEstimatorSimulacionApiTest extends \PHPUnit_Framework_TestCase
+class LAESimulacionApiTest extends \PHPUnit_Framework_TestCase
 {   
     public function setUp()
     {
         $handler = \GuzzleHttp\HandlerStack::create();
-        $config = new \LoanAmountEstimatorSimulacion\Client\Configuration();
+        $config = new \LAESimulacion\Client\Configuration();
         $config->setHost('the_url');
 
         $client = new \GuzzleHttp\Client(['handler' => $handler]);
@@ -20,11 +20,11 @@ class LoanAmountEstimatorSimulacionApiTest extends \PHPUnit_Framework_TestCase
 
     public function testGetLAEByPerson()
     {
-        $request = new \LoanAmountEstimatorSimulacion\Client\Model\PeticionPersona();
-        $persona = new \LoanAmountEstimatorSimulacion\Client\Model\Persona();
-        $domicilio = new \LoanAmountEstimatorSimulacion\Client\Model\DomicilioPeticion();        
-        $estado = new \LoanAmountEstimatorSimulacion\Client\Model\CatalogoEstados();
-        $segmento = new \LoanAmountEstimatorSimulacion\Client\Model\CatalogoSegmento();
+        $request = new \LAESimulacion\Client\Model\PeticionPersona();
+        $persona = new \LAESimulacion\Client\Model\Persona();
+        $domicilio = new \LAESimulacion\Client\Model\DomicilioPeticion();        
+        $estado = new \LAESimulacion\Client\Model\CatalogoEstados();
+        $segmento = new \LAESimulacion\Client\Model\CatalogoSegmento();
             
         $domicilio->setDireccion("SAN JOAQUIN");
         $domicilio->setColoniaPoblacion("EL ARENAL");
@@ -61,8 +61,8 @@ class LoanAmountEstimatorSimulacionApiTest extends \PHPUnit_Framework_TestCase
     
     public function testGetLAEByFolioConsulta()
     {
-        $request = new \LoanAmountEstimatorSimulacion\Client\Model\PeticionFolioConsulta();
-        $segmento = new \LoanAmountEstimatorSimulacion\Client\Model\CatalogoSegmento();
+        $request = new \LAESimulacion\Client\Model\PeticionFolioConsulta();
+        $segmento = new \LAESimulacion\Client\Model\CatalogoSegmento();
 
         $request->setFolioOtorgante("1");
         $request->setSegmento($segmento::PP);

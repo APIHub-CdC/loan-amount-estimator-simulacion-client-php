@@ -1,6 +1,6 @@
 <?php
 
-namespace LoanAmountEstimatorSimulacion\Client\Api;
+namespace LAESimulacion\Client\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -8,12 +8,12 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use LoanAmountEstimatorSimulacion\Client\ApiException;
-use LoanAmountEstimatorSimulacion\Client\Configuration;
-use LoanAmountEstimatorSimulacion\Client\HeaderSelector;
-use LoanAmountEstimatorSimulacion\Client\ObjectSerializer;
+use LAESimulacion\Client\ApiException;
+use LAESimulacion\Client\Configuration;
+use LAESimulacion\Client\HeaderSelector;
+use LAESimulacion\Client\ObjectSerializer;
 
-class LoanAmountEstimatorSimulacionApi
+class LAESimulacionApi
 {
     
     protected $client;
@@ -45,7 +45,7 @@ class LoanAmountEstimatorSimulacionApi
     
     public function getLAEByFolioConsultaWithHttpInfo($x_api_key, $request = null)
     {
-        $returnType = '\LoanAmountEstimatorSimulacion\Client\Model\Respuesta';
+        $returnType = '\LAESimulacion\Client\Model\Respuesta';
         $request = $this->getLAEByFolioConsultaRequest($x_api_key, $request);
         try {
             $options = $this->createHttpClientOption();
@@ -91,7 +91,7 @@ class LoanAmountEstimatorSimulacionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\LoanAmountEstimatorSimulacion\Client\Model\Respuesta',
+                        '\LAESimulacion\Client\Model\Respuesta',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -99,7 +99,7 @@ class LoanAmountEstimatorSimulacionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\LoanAmountEstimatorSimulacion\Client\Model\Errores',
+                        '\LAESimulacion\Client\Model\Errores',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -107,7 +107,7 @@ class LoanAmountEstimatorSimulacionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\LoanAmountEstimatorSimulacion\Client\Model\Errores',
+                        '\LAESimulacion\Client\Model\Errores',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -115,7 +115,7 @@ class LoanAmountEstimatorSimulacionApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\LoanAmountEstimatorSimulacion\Client\Model\Errores',
+                        '\LAESimulacion\Client\Model\Errores',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -123,7 +123,7 @@ class LoanAmountEstimatorSimulacionApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\LoanAmountEstimatorSimulacion\Client\Model\Errores',
+                        '\LAESimulacion\Client\Model\Errores',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -131,7 +131,7 @@ class LoanAmountEstimatorSimulacionApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\LoanAmountEstimatorSimulacion\Client\Model\Errores',
+                        '\LAESimulacion\Client\Model\Errores',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -139,7 +139,7 @@ class LoanAmountEstimatorSimulacionApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\LoanAmountEstimatorSimulacion\Client\Model\Errores',
+                        '\LAESimulacion\Client\Model\Errores',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -161,7 +161,7 @@ class LoanAmountEstimatorSimulacionApi
     
     public function getLAEByFolioConsultaAsyncWithHttpInfo($x_api_key, $request = null)
     {
-        $returnType = '\LoanAmountEstimatorSimulacion\Client\Model\Respuesta';
+        $returnType = '\LAESimulacion\Client\Model\Respuesta';
         $request = $this->getLAEByFolioConsultaRequest($x_api_key, $request);
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -282,7 +282,7 @@ class LoanAmountEstimatorSimulacionApi
     
     public function getLAEByPersonWithHttpInfo($x_api_key, $request = null)
     {
-        $returnType = '\LoanAmountEstimatorSimulacion\Client\Model\Respuesta';
+        $returnType = '\LAESimulacion\Client\Model\Respuesta';
         $request = $this->getLAEByPersonRequest($x_api_key, $request);
         try {
             $options = $this->createHttpClientOption();
@@ -328,7 +328,7 @@ class LoanAmountEstimatorSimulacionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\LoanAmountEstimatorSimulacion\Client\Model\Respuesta',
+                        '\LAESimulacion\Client\Model\Respuesta',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -336,7 +336,7 @@ class LoanAmountEstimatorSimulacionApi
                 case 400:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\LoanAmountEstimatorSimulacion\Client\Model\Errores',
+                        '\LAESimulacion\Client\Model\Errores',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -344,7 +344,7 @@ class LoanAmountEstimatorSimulacionApi
                 case 401:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\LoanAmountEstimatorSimulacion\Client\Model\Errores',
+                        '\LAESimulacion\Client\Model\Errores',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -352,7 +352,7 @@ class LoanAmountEstimatorSimulacionApi
                 case 403:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\LoanAmountEstimatorSimulacion\Client\Model\Errores',
+                        '\LAESimulacion\Client\Model\Errores',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -360,7 +360,7 @@ class LoanAmountEstimatorSimulacionApi
                 case 404:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\LoanAmountEstimatorSimulacion\Client\Model\Errores',
+                        '\LAESimulacion\Client\Model\Errores',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -368,7 +368,7 @@ class LoanAmountEstimatorSimulacionApi
                 case 429:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\LoanAmountEstimatorSimulacion\Client\Model\Errores',
+                        '\LAESimulacion\Client\Model\Errores',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -376,7 +376,7 @@ class LoanAmountEstimatorSimulacionApi
                 case 500:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\LoanAmountEstimatorSimulacion\Client\Model\Errores',
+                        '\LAESimulacion\Client\Model\Errores',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -398,7 +398,7 @@ class LoanAmountEstimatorSimulacionApi
     
     public function getLAEByPersonAsyncWithHttpInfo($x_api_key, $request = null)
     {
-        $returnType = '\LoanAmountEstimatorSimulacion\Client\Model\Respuesta';
+        $returnType = '\LAESimulacion\Client\Model\Respuesta';
         $request = $this->getLAEByPersonRequest($x_api_key, $request);
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())

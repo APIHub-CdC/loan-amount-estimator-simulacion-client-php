@@ -1,6 +1,6 @@
 <?php
 
-namespace LoanAmountEstimatorSimulacion\Client;
+namespace LAESimulacion\Client;
 
 use \Exception;
 

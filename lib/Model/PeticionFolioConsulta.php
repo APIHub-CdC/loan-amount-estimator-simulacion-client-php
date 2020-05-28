@@ -1,9 +1,9 @@
 <?php
 
-namespace LoanAmountEstimatorSimulacion\Client\Model;
+namespace LAESimulacion\Client\Model;
 
 use \ArrayAccess;
-use \LoanAmountEstimatorSimulacion\Client\ObjectSerializer;
+use \LAESimulacion\Client\ObjectSerializer;
 
 class PeticionFolioConsulta implements ModelInterface, ArrayAccess
 {
@@ -13,7 +13,7 @@ class PeticionFolioConsulta implements ModelInterface, ArrayAccess
     
     protected static $apihubTypes = [
         'folio_otorgante' => 'string',
-        'segmento' => '\LoanAmountEstimatorSimulacion\Client\Model\CatalogoSegmento',
+        'segmento' => '\LAESimulacion\Client\Model\CatalogoSegmento',
         'folio_consulta' => 'string'
     ];
     

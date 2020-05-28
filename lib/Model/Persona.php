@@ -1,9 +1,9 @@
 <?php
 
-namespace LoanAmountEstimatorSimulacion\Client\Model;
+namespace LAESimulacion\Client\Model;
 
 use \ArrayAccess;
-use \LoanAmountEstimatorSimulacion\Client\ObjectSerializer;
+use \LAESimulacion\Client\ObjectSerializer;
 
 class Persona implements ModelInterface, ArrayAccess
 {
@@ -21,13 +21,13 @@ class Persona implements ModelInterface, ArrayAccess
         'rfc' => 'string',
         'curp' => 'string',
         'nacionalidad' => 'string',
-        'residencia' => '\LoanAmountEstimatorSimulacion\Client\Model\CatalogoResidencia',
-        'estado_civil' => '\LoanAmountEstimatorSimulacion\Client\Model\CatalogoEstadoCivil',
-        'sexo' => '\LoanAmountEstimatorSimulacion\Client\Model\CatalogoSexo',
+        'residencia' => '\LAESimulacion\Client\Model\CatalogoResidencia',
+        'estado_civil' => '\LAESimulacion\Client\Model\CatalogoEstadoCivil',
+        'sexo' => '\LAESimulacion\Client\Model\CatalogoSexo',
         'clave_elector_ife' => 'string',
         'numero_dependientes' => 'int',
         'fecha_defuncion' => 'string',
-        'domicilio' => '\LoanAmountEstimatorSimulacion\Client\Model\DomicilioPeticion'
+        'domicilio' => '\LAESimulacion\Client\Model\DomicilioPeticion'
     ];
     
     protected static $apihubFormats = [

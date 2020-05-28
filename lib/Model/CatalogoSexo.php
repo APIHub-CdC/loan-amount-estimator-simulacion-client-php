@@ -1,7 +1,7 @@
 <?php
 
-namespace LoanAmountEstimatorSimulacion\Client\Model;
-use \LoanAmountEstimatorSimulacion\Client\ObjectSerializer;
+namespace LAESimulacion\Client\Model;
+use \LAESimulacion\Client\ObjectSerializer;
 
 class CatalogoSexo
 {

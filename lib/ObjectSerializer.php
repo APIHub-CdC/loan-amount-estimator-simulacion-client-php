@@ -1,6 +1,6 @@
 <?php
 
-namespace LoanAmountEstimatorSimulacion\Client;
+namespace LAESimulacion\Client;
 
 class ObjectSerializer
 {
@@ -165,7 +165,7 @@ class ObjectSerializer
         } else {
             $discriminator = $class::DISCRIMINATOR;
             if (!empty($discriminator) && isset($data->{$discriminator}) && is_string($data->{$discriminator})) {
-                $subclass = '\LoanAmountEstimatorSimulacion\Client\Model\\' . $data->{$discriminator};
+                $subclass = '\LAESimulacion\Client\Model\\' . $data->{$discriminator};
                 if (is_subclass_of($subclass, $class)) {
                     $class = $subclass;
                 }

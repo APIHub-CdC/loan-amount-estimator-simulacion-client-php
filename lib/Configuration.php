@@ -1,6 +1,6 @@
 <?php
 
-namespace LoanAmountEstimatorSimulacion\Client;
+namespace LAESimulacion\Client;
 
 class Configuration
 {
@@ -18,7 +18,7 @@ class Configuration
     
     protected $host = '';
     
-    protected $userAgent = 'LoanAmountEstimatorSimulacion-Codegen/1.0.0/php';
+    protected $userAgent = 'LAESimulacion-Codegen/1.0.0/php';
     
     protected $debug = false;
     
@@ -159,7 +159,7 @@ class Configuration
     
     public static function toDebugReport()
     {
-        $report  = 'PHP SDK (LoanAmountEstimatorSimulacion\Client) Debug Report:' . PHP_EOL;
+        $report  = 'PHP SDK (LAESimulacion\Client) Debug Report:' . PHP_EOL;
         $report .= '    OS: ' . php_uname() . PHP_EOL;
         $report .= '    PHP Version: ' . PHP_VERSION . PHP_EOL;
         $report .= '    OpenAPI Spec Version: 1.0.0' . PHP_EOL;
