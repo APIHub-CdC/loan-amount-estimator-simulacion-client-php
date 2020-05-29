@@ -73,27 +73,21 @@ public function testGetLAEByPerson()
   $estado = new \LAESimulacion\Client\Model\CatalogoEstados();
   $segmento = new \LAESimulacion\Client\Model\CatalogoSegmento();
       
-  $domicilio->setDireccion("SAN JOAQUIN");
-  $domicilio->setColoniaPoblacion("EL ARENAL");
-  $domicilio->setDelegacionMunicipio("IZTAPALAPA");
-  $domicilio->setCiudad("MEXICO");
-  $domicilio->setEstado($estado::CDMX);
-  $domicilio->setCP("12345");
+  $domicilio->setDireccion("INSURGENTES SUR 1007");
+  $domicilio->setColoniaPoblacion("INSURGENTES SUR");
+  $domicilio->setDelegacionMunicipio("CIUDAD DE MEXICO");
+  $domicilio->setCiudad("CIUDAD DE MEXICO");
+  $domicilio->setEstado($estado::DF);
+  $domicilio->setCP(null);
 
   $persona->setPrimerNombre("JUAN");
   $persona->setApellidoPaterno("PRUEBA");
   $persona->setApellidoMaterno("CUATRO");
-  $persona->setFechaNacimiento("1966-05-13");
-  $persona->setRFC("PUAC800104");
-
-  $domicilio->setDireccion("INSURGENTES SUR 1004");
-  $domicilio->setColoniaPoblacion("INSURGENTES SUR");
-  $domicilio->setDelegacionMunicipio("CIUDAD DE MEXICO");
-  $domicilio->setCiudad("CIUDAD DE MEXICO");
-  $domicilio->setEstado($estado::CDMX);
-  $domicilio->setCP("11230");
-    
-  $request->setFolioOtorgante("1");
+  $persona->setFechaNacimiento("1980-01-04");
+  $persona->setRFC("PUAC800107");
+  $persona->setDomicilio($domicilio);
+   
+  $request->setFolioOtorgante("121212");
   $request->setSegmento($segmento::PP);
   $request->setPersona($persona);
 
