@@ -26,25 +26,19 @@ class LAESimulacionApiTest extends \PHPUnit_Framework_TestCase
         $estado = new \LAESimulacion\Client\Model\CatalogoEstados();
         $segmento = new \LAESimulacion\Client\Model\CatalogoSegmento();
             
-        $domicilio->setDireccion("SAN JOAQUIN");
-        $domicilio->setColoniaPoblacion("EL ARENAL");
-        $domicilio->setDelegacionMunicipio("IZTAPALAPA");
-        $domicilio->setCiudad("MEXICO");
+        $domicilio->setDireccion("INSURGENTES SUR 1004");
+        $domicilio->setColoniaPoblacion("INSURGENTES SUR");
+        $domicilio->setDelegacionMunicipio("CIUDAD DE MEXICO");
+        $domicilio->setCiudad("CIUDAD DE MEXICO");
         $domicilio->setEstado($estado::CDMX);
-        $domicilio->setCP("12345");
+        $domicilio->setCP("11230");
 
         $persona->setPrimerNombre("JUAN");
         $persona->setApellidoPaterno("PRUEBA");
         $persona->setApellidoMaterno("CUATRO");
         $persona->setFechaNacimiento("1966-05-13");
         $persona->setRFC("PUAC800104");
-	
-	    $domicilio->setDireccion("INSURGENTES SUR 1004");
-	    $domicilio->setColoniaPoblacion("INSURGENTES SUR");
-	    $domicilio->setDelegacionMunicipio("CIUDAD DE MEXICO");
-	    $domicilio->setCiudad("CIUDAD DE MEXICO");
-	    $domicilio->setEstado($estado::CDMX);
-	    $domicilio->setCP("11230");
+        $persona->setDomicilio($domicilio);
          
         $request->setFolioOtorgante("1");
         $request->setSegmento($segmento::PP);
